@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+
+
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 220px 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+
+
+  grid-template-areas:
+    "cabecalho cabecalho cabecalho"
+    "principal principal principal"
+    "rodape    rodape    rodape";
+
+  gap: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.header {
+  grid-area: cabecalho;
+  background-color: #0a2342;
+  color: white;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.naveg {
+  grid-area: cabecalho;
+  position: absolute;
+  right: 50px;
+  top: 10px;
+}
+
+.content {
+  text-align: center;
+  grid-area: principal;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.footer {
+  text-align: center;
+  grid-area: rodape;
+  background-color: #0a2342;
+  color: #a0b1c5;
+  padding: 25px 30px;
+}
+
+.content h2 {
+  background-color: rgb(67, 67, 100);
+  font-size: 2rem;
+  color: #fcfcfc;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  background-color: rgb(67, 67, 100);
+  align-content:  center;
+  margin-bottom: 30px;
+  color: #fcfcfc;
+}
+
+.grid-cards {
+  display: grid;
+  border-radius: 100px;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  height: 300px; 
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  position: relative; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-card {
+  align-self: center;
+  background-color: #2caeba;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-card:hover {
+  background-color: #259aa5;
+}
